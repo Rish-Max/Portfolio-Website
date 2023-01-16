@@ -1,2 +1,6 @@
 # Portfolio-Website
-Website made for portfolio
+Build portfolio website using
+- HTML
+- CSS
+- Sass
+- JS
