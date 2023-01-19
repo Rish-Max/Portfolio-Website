@@ -1,0 +1,14 @@
+svg {
+  transform-origin: center;
+  .logo_boundary {
+    stroke-dasharray: 325;
+    stroke-dashoffset: 0;
+    animation-delay: 200ms;
+    animation: svgLogoLinearAnimation 0.75s linear;
+  }
+  .logo_text {
+    opacity: 1;
+    animation-delay: 0.1s;
+    animation: lateFadeIn 1.2s ease-in;
+  }
+}

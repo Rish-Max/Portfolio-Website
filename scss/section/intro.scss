@@ -1,0 +1,62 @@
+.intro {
+  .content {
+    .intro-text {
+      margin-bottom: 30px;
+      @include respond-down(sm) {
+        margin-bottom: 20px;
+      }
+    }
+    .description {
+      max-width: 510px;
+      margin-bottom: 50px;
+      @include respond-down(sm) {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+    .button {
+      padding: 20px 30px;
+      @include respond-down(sm) {
+        padding: 12px 24px;
+      }
+    }
+  }
+  .scroll-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: scrollAnimation 1s ease-in-out infinite alternate;
+
+      font-size: var(--fz-sm);
+      svg {
+        height: 80px;
+        path {
+          stroke: var(--green);
+        }
+      }
+      &::before {
+        display: none;
+      }
+    }
+    @include respond-down(sm) {
+      a {
+        font-size: var(--fz-xxs);
+        svg {
+          height: 20px;
+        }
+      }
+    }
+  }
+  &.show-scroll {
+    .scroll-indicator {
+      opacity: 1;
+      transition: opacity 0.1s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.button {
+  --padding: 10px 20px;
+
+  display: inline-block;
+
+  background-color: transparent;
+
+  border: 1px solid var(--green);
+  border-radius: 5px;
+
+  color: var(--green);
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+
+  padding: var(--padding);
+
+  transition: background 0.1s ease-in-out, box-shadow 0.2s linear;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--green);
+
+    color: var(--navy);
+    font-weight: bold;
+
+    box-shadow: 0 0 8px 0 var(--green);
+  }
+
+  @include respond-down(sm) {
+    --padding: 8px 18px;
+    font-size: var(--font-md);
+  }
+}
+
+.link {
+  @extend %underline-effect;
+}
+
+.link-with-bg {
+  @extend %underline-effect;
+  @extend %background-effect;
+}
+
+.footer-link {
+  font-size: var(--fz-xs);
+  font-family: var(--font-mono);
+
+  color: var(--light-slate);
+
+  margin-bottom: 10px;
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--green);
+  }
+
+  @include respond-down(sm) {
+    font-size: var(--fz-xxs);
+  }
+}
+
+.skip-to-content {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 25px;
+  transform: translateY(-100%);
+  background-color: var(--green);
+  color: var(--navy);
+  font-weight: bold;
+  font-family: var(--font-mono);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}

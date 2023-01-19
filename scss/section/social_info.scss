@@ -1,0 +1,32 @@
+.social-info-section {
+  .social-profile-link {
+    left: 50px;
+  }
+  .email-link {
+    right: 50px;
+    a {
+      writing-mode: vertical-lr;
+    }
+  }
+  .social-profile-link,
+  .email-link {
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 0;
+
+    &::after {
+      height: 200px;
+      width: 1px;
+      content: "";
+      background-color: var(--light-slate);
+      position: relative;
+      left: 10px;
+    }
+  }
+  @include respond-down(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin respond-down($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin reduce-motion-disable {
+  @media (prefers-reduced-motion) {
+    @content;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "vanilla-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio webiste using HTML,SCSS & JS",
+  "scripts": {
+    "build:css": "sass ./scss/index.scss ./css/main.css",
+    "watch:css": "sass --watch ./scss/index.scss ./css/main.css"
+  },
+  "author": "Rishabh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}

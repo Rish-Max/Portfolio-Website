@@ -1,0 +1,16 @@
+footer {
+  text-align: center;
+  a {
+    display: block;
+  }
+  .social-profile-link {
+    display: none;
+    justify-content: center;
+    a {
+      padding: 0 10px;
+    }
+    @include respond-down(md) {
+      display: flex;
+    }
+  }
+}

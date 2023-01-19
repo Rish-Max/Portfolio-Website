@@ -1,0 +1,34 @@
+.work-section {
+  .content {
+    flex: 1;
+    .tabs {
+      .tab-content {
+        .highlights {
+          .title {
+            font-size: var(--fz-xl);
+          }
+          .date {
+            font-size: var(--fz-sm);
+          }
+          margin-bottom: 20px;
+
+          @include respond-down(md) {
+            .title {
+              font-size: var(--fz-lg);
+            }
+            .date {
+              font-size: var(--fz-xs);
+            }
+            margin-bottom: 15px;
+          }
+        }
+        li {
+          margin-bottom: 10px;
+          @include respond-down(md) {
+            font-size: var(--fz-sm);
+          }
+        }
+      }
+    }
+  }
+}

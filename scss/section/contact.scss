@@ -1,0 +1,17 @@
+.contact-section {
+  text-align: center;
+  justify-content: center;
+  .h1,
+  .description {
+    margin-bottom: 20px;
+  }
+  .description {
+    max-width: 500px;
+  }
+  .button {
+    padding: 20px 30px;
+    @include respond-down(sm) {
+      padding: 12px 24px;
+    }
+  }
+}

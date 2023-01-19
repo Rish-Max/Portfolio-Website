@@ -1,0 +1,71 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+
+  @include respond-down(sm) {
+    scroll-padding-top: 70px;
+  }
+}
+
+body {
+  min-height: 100vh;
+
+  color: var(--slate);
+  background-color: var(--navy);
+
+  font-family: var(--font-sans);
+  font-size: var(--fz-md);
+  line-height: 1.3;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+aside,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-slate);
+  border: 3px solid var(--navy);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-navy);
+}
+
+:focus-visible {
+  outline: 2px dashed var(--green);
+  outline-offset: 3px;
+}

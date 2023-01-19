@@ -1,0 +1,53 @@
+.h1 {
+  font-size: var(--fz-h1);
+  line-height: 1.1;
+  font-weight: 600;
+
+  @include respond-down(md) {
+    font-size: var(--fz-h4);
+  }
+
+  @include respond-down(xs) {
+    font-size: var(--fz-h5);
+  }
+}
+
+.h2 {
+  font-size: var(--fz-h2);
+  line-height: 1.1;
+  font-weight: 600;
+
+  @include respond-down(md) {
+    font-size: var(--fz-h5);
+  }
+  @include respond-down(md) {
+    font-size: var(--fz-h6);
+  }
+}
+
+.heading-with-dash {
+  font-size: var(--fz-h6);
+  font-size: 500;
+  line-height: 1;
+
+  @extend %infinite-line;
+
+  span {
+    position: relative;
+    z-index: 2;
+    padding-right: 25px;
+    background-color: var(--navy);
+  }
+
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: var(--fz-xl);
+  line-height: 1.3;
+  font-weight: 400;
+
+  @include respond-down(xs) {
+    font-size: var(--fz-lg);
+  }
+}

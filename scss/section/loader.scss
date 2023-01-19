@@ -1,0 +1,10 @@
+.loader {
+  height: 100vh;
+  background-color: var(--dark-navy);
+  svg {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

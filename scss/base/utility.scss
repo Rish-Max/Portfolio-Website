@@ -1,0 +1,61 @@
+.d-none {
+  display: none;
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
+
+.text-sans {
+  font-family: var(--font-sans);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-lightest-slate {
+  color: var(--lightest-slate);
+}
+
+.text-light-slate {
+  color: var(--light-slate);
+}
+
+.text-dark-slate {
+  color: var(--dark-slate);
+}
+
+.postion-relative {
+  position: relative;
+}
+
+[data-animate="true"]:not([data-start-animate]) {
+  visibility: hidden;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  [data-animate="true"]:not([data-start-animate]) {
+    visibility: visible;
+  }
+}
+
+[data-animate="true"][data-start-animate="true"] {
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+}
+[data-animate="true"][data-start-animate="true"][data-animate-type="fade-in"] {
+  animation-name: lateFadeIn;
+}
+[data-animate="true"][data-start-animate="true"][data-animate-type="slide-down"] {
+  animation-name: slideDown;
+}
+[data-animate="true"][data-start-animate="true"][data-animate-type="slide-down-with-transform"] {
+  animation-name: slideDownWithTransform;
+}
+[data-animate="true"][data-start-animate="true"][data-animate-type="slide-up"] {
+  animation-name: slideUp;
+}
+[data-animate="true"][data-start-animate="true"][data-animate-type="slide-right"] {
+  animation-name: slideRight;
+}
